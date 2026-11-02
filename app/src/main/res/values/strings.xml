@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">BMIZWalidacja</string>
+    <string name="tv_header">Kalkulator BMI</string>
+    <string name="tv_weight">Podaj swoją wagę:</string>
+    <string name="tv_height">Podaj swój wzrost (cm):</string>
+    <string name="tv_gender">Wybierz swoją płeć:</string>
+    <string name="rb_male">Mężczyzna</string>
+    <string name="rb_female">Kobieta</string>
+    <string name="btn_calc">Policz</string>
 </resources>
