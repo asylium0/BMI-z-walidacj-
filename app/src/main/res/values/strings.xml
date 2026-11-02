@@ -7,4 +7,8 @@
     <string name="rb_male">Mężczyzna</string>
     <string name="rb_female">Kobieta</string>
     <string name="btn_calc">Policz</string>
+
+    <string name="error_gender">Proszę wybrać płeć</string>
+    <string name="error_height">Podano niepoprawny wzrost</string>
+    <string name="error_weight">Podano niepoprawną wagę</string>
 </resources>
