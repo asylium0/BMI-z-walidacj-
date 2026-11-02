@@ -11,4 +11,10 @@
     <string name="error_gender">Proszę wybrać płeć</string>
     <string name="error_height">Podano niepoprawny wzrost</string>
     <string name="error_weight">Podano niepoprawną wagę</string>
+
+    <string name="tv_result">Twoje BMI wynosi: %f\nMasz %s\na twoja płeć to: %s</string>
+
+    <string name="underweight">niedowagę</string>
+    <string name="overweight">nadwagę</string>
+    <string name="correct_weight">poprawną wagę</string>
 </resources>

@@ -5,6 +5,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -13,11 +14,14 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import org.w3c.dom.Text;
+
 public class MainActivity extends AppCompatActivity {
 
     private RadioGroup rgGender;
     private EditText etWeight, etHeight;
     private Button btnCalc;
+    private TextView tvResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         etWeight = findViewById(R.id.etWeight);
         etHeight = findViewById(R.id.etHeight);
         btnCalc = findViewById(R.id.btnCalc);
+        tvResult = findViewById(R.id.tvResult);
 
         btnCalc.setOnClickListener(v -> validate());
 
@@ -63,6 +68,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void calculate(RadioButton checkedGender, String height, String weight){
+        double BMI = Double.parseDouble(weight) / ( Double.parseDouble(height) * Double.parseDouble(height) );
+        String gender = checkedGender.getText().toString();
+
+        String weightCategory;
+        if(BMI < 18.5){
+            weightCategory = getString(R.string.underweight);
+        } else if (BMI < 25) {
+            weightCategory = getString(R.string.correct_weight);
+        }else{
+            weightCategory = getString(R.string.overweight);
+        }
+
+
+        tvResult.setText(getString(R.string.tv_result, BMI, weightCategory, gender));
 
     }
 
